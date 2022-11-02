@@ -234,6 +234,8 @@
 .carousel-track {
     padding: 0;
     margin: 0;
+    position: relative;
+    height: 100%;
 }
 
 .carousel-slide {
