@@ -212,3 +212,77 @@
 --------------------------------
 */
 
+.carousel {
+    position: relative;
+    width: 40%;
+    height: 600px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+    border: var(--purple) 2px solid;
+}
+
+.carousel-track-container {
+    height: 100%;
+    position: relative;
+}
+
+.carousel-track {
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--light-black);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-button:active {
+    transform: translateY(-40%);
+}
+
+.left {
+    left: -60px;
+}
+
+.right {
+    right: -60px;
+}
+
+.carousel-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 10px;
+}
+
+.carousel-indicator {
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(56, 63, 69, .3);
+}
+
+.carousel-indicator.current-slide {
+    background-color: rgba(56, 63, 69);
+}

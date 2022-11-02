@@ -12,10 +12,14 @@ import Neptune from "./planet-images/neptune.jpeg";
 export default function makePlanetsPage() {
     const content = document.querySelector(".content");
 
+    const carousel = document.createElement("div");
+    carousel.classList.add("carousel");
+
     const left = document.createElement("button");
     left.classList.add("material-symbols-outlined");
     left.textContent = "chevron_left";
     left.classList.add("carousel-button");
+    left.classList.add("left");
 
     const carouselContainer = document.createElement("div");
     carouselContainer.classList.add("carousel-track-container");
@@ -41,30 +45,34 @@ export default function makePlanetsPage() {
     neptune.src = Neptune;
 
     const planetArray = [mercury, venus, earth, mars, jupiter, saturn, uranus, neptune];
+    const carouselNavigation = document.createElement("div");
+    carouselNavigation.classList.add("carousel-navigation");
     for (let i = 0; i < planetArray.length; i++) {
+        planetArray[i].classList.add("carousel-image");
         const carouselSlide = document.createElement("li");
         carouselSlide.classList.add("carousel-slide");
         carouselSlide.setAttribute("data-key", `${i}`);
         carouselSlide.appendChild(planetArray[i]);
         carouselTrack.appendChild(carouselSlide);
+        const carouselIndicator = document.createElement("button");
+        carouselIndicator.classList.add("carousel-indicator");
+        if (i === 0) {
+            carouselIndicator.classList.add("current-slide");
+        }
+        carouselNavigation.appendChild(carouselIndicator);
     }
 
     const right = document.createElement("button");
     right.classList.add("material-symbols-outlined");
     right.textContent = "chevron_right";
     right.classList.add("carousel-button");
-
-    const carouselNavigation = document.createElement("div");
-    carouselNavigation.classList.add("carousel-navigation");
-    for (let i = 0; i < planetArray.length; i++) {
-        const carouselIndicator = document.createElement("button");
-        carouselNavigation.appendChild(carouselIndicator);
-    }
+    right.classList.add("right");
 
     carouselContainer.appendChild(carouselTrack);
 
-    content.appendChild(left);
-    content.appendChild(carouselContainer);
-    content.appendChild(right);
-    content.appendChild(carouselNavigation);
+    carousel.appendChild(left);
+    carousel.appendChild(carouselContainer);
+    carousel.appendChild(right);
+    carousel.appendChild(carouselNavigation);
+    content.appendChild(carousel);
 }
