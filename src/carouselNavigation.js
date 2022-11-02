@@ -16,7 +16,11 @@ class CarouselItems {
 
 export function moveLeft() {
     const carousel = new CarouselItems();
-    console.log(carousel.slidesWidth);
+    const nextSlide = carousel.currentSlide.previousElementSibling;
+    const amountToMove = nextSlide.style.left;
+    carousel.track.style.transform = `translateX(-${amountToMove})`;
+    carousel.currentSlide.classList.remove("current-slide");
+    nextSlide.classList.add("current-slide");
 }
 
 export function moveRight() {
