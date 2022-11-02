@@ -8,6 +8,10 @@ import Jupiter from "./planet-images/jupiter.jpeg";
 import Saturn from "./planet-images/saturn.jpeg";
 import Uranus from "./planet-images/uranus.jpeg";
 import Neptune from "./planet-images/neptune.jpeg";
+import { moveLeft } from "./carouselNavigation";
+import { moveRight } from "./carouselNavigation";
+import { moveToSpecific } from "./carouselNavigation";
+import { setSlidePosition } from "./carouselNavigation";
 
 export default function makePlanetsPage() {
     const content = document.querySelector(".content");
@@ -20,6 +24,7 @@ export default function makePlanetsPage() {
     left.textContent = "chevron_left";
     left.classList.add("carousel-button");
     left.classList.add("left");
+    left.addEventListener("click", moveLeft);
 
     const carouselContainer = document.createElement("div");
     carouselContainer.classList.add("carousel-track-container");
@@ -51,7 +56,10 @@ export default function makePlanetsPage() {
         planetArray[i].classList.add("carousel-image");
         const carouselSlide = document.createElement("li");
         carouselSlide.classList.add("carousel-slide");
-        carouselSlide.setAttribute("data-key", `${i}`);
+        carouselSlide.setAttribute("data-target", `${i}`);
+        if (i === 0) {
+            carouselSlide.classList.add("current-slide");
+        }
         carouselSlide.appendChild(planetArray[i]);
         carouselTrack.appendChild(carouselSlide);
         const carouselIndicator = document.createElement("button");
@@ -59,6 +67,8 @@ export default function makePlanetsPage() {
         if (i === 0) {
             carouselIndicator.classList.add("current-slide");
         }
+        carouselIndicator.setAttribute("data-key", `${i}`);
+        carouselIndicator.addEventListener("click", moveToSpecific);
         carouselNavigation.appendChild(carouselIndicator);
     }
 
@@ -67,6 +77,7 @@ export default function makePlanetsPage() {
     right.textContent = "chevron_right";
     right.classList.add("carousel-button");
     right.classList.add("right");
+    right.addEventListener("click", moveRight);
 
     carouselContainer.appendChild(carouselTrack);
 
@@ -75,4 +86,6 @@ export default function makePlanetsPage() {
     carousel.appendChild(right);
     carousel.appendChild(carouselNavigation);
     content.appendChild(carousel);
+
+    setSlidePosition();
 }
