@@ -1,0 +1,9 @@
+/* page setup
+--------------------------------
+*/
+
+@import url("Custom font goes here");
+
+:root {
+    -webkit-tap-highlight-color: transparent;
+}
