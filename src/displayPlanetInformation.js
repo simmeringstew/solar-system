@@ -32,7 +32,7 @@ export default function displayPlanetInformation(index) {
     averageTemperature.textContent = `Average Temperature: ${planet.averageTemperature}`;
 
     const habitable = document.createElement("p");
-    habitable.textContent = `Average Temperature: ${planet.habitable}`;
+    habitable.textContent = `Habitable: ${planet.habitable}`;
 
     const lengthOfYear = document.createElement("p");
     lengthOfYear.textContent = `Length of Year: ${planet.lengthYear}`;
