@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Mercury",
+        "distanceFromSun": "57,909,050 km",
+        "diameter": "4880 km",
+        "moons": "0",
+        "rockOrGas": "Rock",
+        "averageTemperature": "67c",
+        "habitable": "No",
+        "lengthYear": "87.9 Earth Days",
+        "lengthofDay": "1,408 Hours"
+    },
+    {
+        "name": "Venus",
+        "distanceFromSun": "108,208,000 km",
+        "diameter": "12,103.6 km",
+        "moons": "0",
+        "rockOrGas": "Rock",
+        "averageTemperature": "464c",
+        "habitable": "No",
+        "lengthYear": "224.65 Earth Days",
+        "lengthofDay": "5,832 Hours"
+    },
+    {
+        "name": "Earth",
+        "distanceFromSun": "149,598,023 km",
+        "diameter": "12,742 km",
+        "moons": "1",
+        "rockOrGas": "Rock",
+        "averageTemperature": "14c",
+        "habitable": "Yes",
+        "lengthYear": "365.25 Earth Days",
+        "lengthofDay": "1 Earth Day"
+    },
+    {
+        "name": "Mars",
+        "distanceFromSun": "227,939,366 km",
+        "diameter": "6,791.43 km",
+        "moons": "2",
+        "rockOrGas": "Rock",
+        "averageTemperature": "-60c",
+        "habitable": "Maybe one day",
+        "lengthYear": "686.98 Earth Days",
+        "lengthofDay": "25 Hours"
+    },
+    {
+        "name": "Jupiter",
+        "distanceFromSun": "778 million km",
+        "diameter": "142,984 km",
+        "moons": "80",
+        "rockOrGas": "Gas",
+        "averageTemperature": "-108c",
+        "habitable": "No",
+        "lengthYear": "4,333 Earth Days",
+        "lengthofDay": "10 Hours"
+    },
+    {
+        "name": "Saturn",
+        "distanceFromSun": "1.433 billion km",
+        "diameter": "25,000 km",
+        "moons": "83 and Rings",
+        "rockOrGas": "Gas",
+        "averageTemperature": "-139c",
+        "habitable": "No",
+        "lengthYear": "10,759 Earth Days",
+        "lengthofDay": "11 Hours"
+    },
+    {
+        "name": "Uranus",
+        "distanceFromSun": "2.87 billion km",
+        "diameter": "51,118 km",
+        "moons": "27",
+        "rockOrGas": "Gas",
+        "averageTemperature": "-197c",
+        "habitable": "No",
+        "lengthYear": "30,687 Earth Days",
+        "lengthofDay": "17 Hours"
+    },
+    {
+        "name": "Neptune",
+        "distanceFromSun": "4.5 billion km",
+        "diameter": "49,528 km",
+        "moons": "14",
+        "rockOrGas": "Gas",
+        "averageTemperature": "-201c",
+        "habitable": "No",
+        "lengthYear": "60,190 Earth Days",
+        "lengthofDay": "16 Hours"
+    }
+]
