@@ -8,7 +8,7 @@
         "averageTemperature": "67c",
         "habitable": "No",
         "lengthYear": "87.9 Earth Days",
-        "lengthofDay": "1,408 Hours"
+        "lengthDay": "1,408 Hours"
     },
     {
         "name": "Venus",
@@ -19,7 +19,7 @@
         "averageTemperature": "464c",
         "habitable": "No",
         "lengthYear": "224.65 Earth Days",
-        "lengthofDay": "5,832 Hours"
+        "lengthDay": "5,832 Hours"
     },
     {
         "name": "Earth",
@@ -30,7 +30,7 @@
         "averageTemperature": "14c",
         "habitable": "Yes",
         "lengthYear": "365.25 Earth Days",
-        "lengthofDay": "1 Earth Day"
+        "lengthDay": "1 Earth Day"
     },
     {
         "name": "Mars",
@@ -41,7 +41,7 @@
         "averageTemperature": "-60c",
         "habitable": "Maybe one day",
         "lengthYear": "686.98 Earth Days",
-        "lengthofDay": "25 Hours"
+        "lengthDay": "25 Hours"
     },
     {
         "name": "Jupiter",
@@ -52,7 +52,7 @@
         "averageTemperature": "-108c",
         "habitable": "No",
         "lengthYear": "4,333 Earth Days",
-        "lengthofDay": "10 Hours"
+        "lengthDay": "10 Hours"
     },
     {
         "name": "Saturn",
@@ -63,7 +63,7 @@
         "averageTemperature": "-139c",
         "habitable": "No",
         "lengthYear": "10,759 Earth Days",
-        "lengthofDay": "11 Hours"
+        "lengthDay": "11 Hours"
     },
     {
         "name": "Uranus",
@@ -74,7 +74,7 @@
         "averageTemperature": "-197c",
         "habitable": "No",
         "lengthYear": "30,687 Earth Days",
-        "lengthofDay": "17 Hours"
+        "lengthDay": "17 Hours"
     },
     {
         "name": "Neptune",
@@ -85,6 +85,6 @@
         "averageTemperature": "-201c",
         "habitable": "No",
         "lengthYear": "60,190 Earth Days",
-        "lengthofDay": "16 Hours"
+        "lengthDay": "16 Hours"
     }
 ]

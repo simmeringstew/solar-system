@@ -10,6 +10,7 @@ import Uranus from "./planet-images/uranus.jpeg";
 import Neptune from "./planet-images/neptune.jpeg";
 import { moveCarousel } from "./carouselNavigation";
 import { setSlidePosition } from "./carouselNavigation";
+import displayPlanetInformation from "./displayPlanetInformation";
 
 export default function makePlanetsPage() {
     const content = document.querySelector(".content");
@@ -61,6 +62,9 @@ export default function makePlanetsPage() {
             carouselSlide.classList.add("current-slide");
         }
         carouselSlide.appendChild(planetArray[i]);
+        carouselSlide.addEventListener("click", () => {
+            displayPlanetInformation(parseInt(carouselSlide.getAttribute("data-target")));
+        });
         carouselTrack.appendChild(carouselSlide);
         const carouselIndicator = document.createElement("button");
         carouselIndicator.classList.add("carousel-indicator");
