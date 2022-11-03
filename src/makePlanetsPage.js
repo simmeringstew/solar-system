@@ -8,8 +8,7 @@ import Jupiter from "./planet-images/jupiter.jpeg";
 import Saturn from "./planet-images/saturn.jpeg";
 import Uranus from "./planet-images/uranus.jpeg";
 import Neptune from "./planet-images/neptune.jpeg";
-import { moveLeftOrRight } from "./carouselNavigation";
-import { moveToSpecific } from "./carouselNavigation";
+import { moveCarousel } from "./carouselNavigation";
 import { setSlidePosition } from "./carouselNavigation";
 
 export default function makePlanetsPage() {
@@ -24,7 +23,7 @@ export default function makePlanetsPage() {
     left.classList.add("carousel-button");
     left.classList.add("left");
     left.addEventListener("click", () => {
-        moveLeftOrRight("left");
+        moveCarousel("left");
     });
 
     const carouselContainer = document.createElement("div");
@@ -69,7 +68,9 @@ export default function makePlanetsPage() {
             carouselIndicator.classList.add("current-indicator");
         }
         carouselIndicator.setAttribute("data-indicator", `${i}`);
-        carouselIndicator.addEventListener("click", moveToSpecific);
+        carouselIndicator.addEventListener("click", () => {
+            moveCarousel(parseInt(carouselIndicator.getAttribute("data-indicator")));
+        });
         carouselNavigation.appendChild(carouselIndicator);
     }
 
@@ -79,7 +80,7 @@ export default function makePlanetsPage() {
     right.classList.add("carousel-button");
     right.classList.add("right");
     right.addEventListener("click", () => {
-        moveLeftOrRight("right");
+        moveCarousel("right");
     });
 
     carouselContainer.appendChild(carouselTrack);

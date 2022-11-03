@@ -14,10 +14,13 @@ class CarouselItems {
     }
 }
 
-export function moveLeftOrRight(direction) {
+export function moveCarousel(direction) {
     const carousel = new CarouselItems();
     let nextSlide = undefined;
-    if (direction === "left") {
+    if (isNaN(direction) === false) {
+        nextSlide = document.querySelector(`[data-target="${direction}"]`);
+    }
+    else if (direction === "left") {
         nextSlide = carousel.currentSlide.previousElementSibling;
         if (nextSlide === null) {
             nextSlide = carousel.slides[carousel.slides.length - 1];
@@ -36,18 +39,11 @@ export function moveLeftOrRight(direction) {
     setIndicator();
 }
 
-export function moveToSpecific() {
-    const carousel = new CarouselItems();
-    const index = this.getAttribute("data-key");
-
-}
-
 function setIndicator() {
     const currentSlide = document.querySelector(".current-slide");
     const currentIndicator = document.querySelector(".current-indicator");
     const index = parseInt(currentSlide.getAttribute("data-target"));
     const nextIndicator = document.querySelector(`[data-indicator="${index}"]`);
-    console.log(nextIndicator);
     currentIndicator.classList.remove("current-indicator");
     nextIndicator.classList.add("current-indicator");
 
