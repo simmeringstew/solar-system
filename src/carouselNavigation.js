@@ -33,11 +33,23 @@ export function moveLeftOrRight(direction) {
     carousel.track.style.transform = `translateX(-${amountToMove})`;
     carousel.currentSlide.classList.remove("current-slide");
     nextSlide.classList.add("current-slide");
+    setIndicator();
 }
 
 export function moveToSpecific() {
     const carousel = new CarouselItems();
     const index = this.getAttribute("data-key");
+
+}
+
+function setIndicator() {
+    const currentSlide = document.querySelector(".current-slide");
+    const currentIndicator = document.querySelector(".current-indicator");
+    const index = parseInt(currentSlide.getAttribute("data-target"));
+    const nextIndicator = document.querySelector(`[data-indicator="${index}"]`);
+    console.log(nextIndicator);
+    currentIndicator.classList.remove("current-indicator");
+    nextIndicator.classList.add("current-indicator");
 
 }
 

@@ -66,9 +66,9 @@ export default function makePlanetsPage() {
         const carouselIndicator = document.createElement("button");
         carouselIndicator.classList.add("carousel-indicator");
         if (i === 0) {
-            carouselIndicator.classList.add("current-slide");
+            carouselIndicator.classList.add("current-indicator");
         }
-        carouselIndicator.setAttribute("data-key", `${i}`);
+        carouselIndicator.setAttribute("data-indicator", `${i}`);
         carouselIndicator.addEventListener("click", moveToSpecific);
         carouselNavigation.appendChild(carouselIndicator);
     }
