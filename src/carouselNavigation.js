@@ -36,11 +36,10 @@ export function moveCarousel(direction) {
     carousel.track.style.transform = `translateX(-${amountToMove})`;
     carousel.currentSlide.classList.remove("current-slide");
     nextSlide.classList.add("current-slide");
-    setIndicator();
+    setIndicator(nextSlide);
 }
 
-function setIndicator() {
-    const currentSlide = document.querySelector(".current-slide");
+function setIndicator(currentSlide) {
     const currentIndicator = document.querySelector(".current-indicator");
     const index = parseInt(currentSlide.getAttribute("data-target"));
     const nextIndicator = document.querySelector(`[data-indicator="${index}"]`);
