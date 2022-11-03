@@ -8,8 +8,7 @@ import Jupiter from "./planet-images/jupiter.jpeg";
 import Saturn from "./planet-images/saturn.jpeg";
 import Uranus from "./planet-images/uranus.jpeg";
 import Neptune from "./planet-images/neptune.jpeg";
-import { moveLeft } from "./carouselNavigation";
-import { moveRight } from "./carouselNavigation";
+import { moveLeftOrRight } from "./carouselNavigation";
 import { moveToSpecific } from "./carouselNavigation";
 import { setSlidePosition } from "./carouselNavigation";
 
@@ -24,7 +23,9 @@ export default function makePlanetsPage() {
     left.textContent = "chevron_left";
     left.classList.add("carousel-button");
     left.classList.add("left");
-    left.addEventListener("click", moveLeft);
+    left.addEventListener("click", () => {
+        moveLeftOrRight("left");
+    });
 
     const carouselContainer = document.createElement("div");
     carouselContainer.classList.add("carousel-track-container");
@@ -77,7 +78,9 @@ export default function makePlanetsPage() {
     right.textContent = "chevron_right";
     right.classList.add("carousel-button");
     right.classList.add("right");
-    right.addEventListener("click", moveRight);
+    right.addEventListener("click", () => {
+        moveLeftOrRight("right");
+    });
 
     carouselContainer.appendChild(carouselTrack);
 

@@ -14,18 +14,21 @@ class CarouselItems {
     }
 }
 
-export function moveLeft() {
+export function moveLeftOrRight(direction) {
     const carousel = new CarouselItems();
-    const nextSlide = carousel.currentSlide.previousElementSibling;
-    const amountToMove = nextSlide.style.left;
-    carousel.track.style.transform = `translateX(-${amountToMove})`;
-    carousel.currentSlide.classList.remove("current-slide");
-    nextSlide.classList.add("current-slide");
-}
-
-export function moveRight() {
-    const carousel = new CarouselItems();
-    const nextSlide = carousel.currentSlide.nextElementSibling;
+    let nextSlide = undefined;
+    if (direction === "left") {
+        nextSlide = carousel.currentSlide.previousElementSibling;
+        if (nextSlide === null) {
+            nextSlide = carousel.slides[carousel.slides.length - 1];
+        }
+    }
+    else {
+        nextSlide = carousel.currentSlide.nextElementSibling;
+        if (nextSlide === null) {
+            nextSlide = carousel.slides[0];
+        }
+    }
     const amountToMove = nextSlide.style.left;
     carousel.track.style.transform = `translateX(-${amountToMove})`;
     carousel.currentSlide.classList.remove("current-slide");
