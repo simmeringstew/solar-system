@@ -2,6 +2,7 @@ import "./meyer-reset.css";
 import "./style.css";
 import makeHomePage from "./makeHomePage";
 import makePlantesPage from "./makePlanetsPage";
+import makeContactPage from "./makeContactPage";
 
 // global variable for the currently active page set to 0 which is home
 let currentPage = 0;
@@ -39,6 +40,9 @@ function changePage() {
                     break;
                 case 1:
                     makePlantesPage();
+                    break;
+                case 2:
+                    makeContactPage();
                     break;
             }
         }

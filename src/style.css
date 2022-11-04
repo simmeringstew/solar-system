@@ -301,6 +301,7 @@
     align-items: flex-start;
     gap: 10px;
     margin-top: 200px;
+    margin-bottom: 20px;
     background-color: var(--light-black);
     width: 40%;
     border-radius: 16px;
@@ -320,4 +321,83 @@
     color: var(--white);
     opacity: var(--medium);
     font-size: 1.1rem;
+}
+
+/* contact us
+--------------------------------
+*/
+
+.form {
+    background-color: var(--light-black);
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 50px;
+    width: 40%;
+}
+
+.contact-heading {
+    color: var(--white);
+    opacity: var(--high);
+    font-size: 2rem;
+}
+
+.contact-extra {
+    color: var(--white);
+    opacity: var(--medium);
+    font-size: 1.1rem;
+}
+
+.text-area, .email {
+    background-color: var(--white);
+    opacity: var(--high);
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+.text-area {
+    border: var(--light-black) 2px solid;
+}
+
+.text-area:focus, #email:focus {
+    outline-color: var(--black);
+}
+
+.email {
+    width: 50%;
+    border: none;
+}
+
+.email-label {
+    color: var(--white);
+    opacity: var(--medium);
+    font-size: 1.1rem;
+}
+
+.bottom-row-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.submit-button {
+    margin-left: auto;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 16px;
+    color: var(--white);
+    opacity: var(--high);
+    background-color: var(--purple);
+    padding: 10px;
+}
+
+.email-message {
+    position: absolute;
+    top: 35px;
+    left: 60px;
+    font-size: 0.8rem;
+    visibility: hidden;
 }
